@@ -1,0 +1,90 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# ==========================================
+# 1. Environment & Secrets (보안)
+# ==========================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p8
+*.p12
+*.mobileprovision
+
+# ==========================================
+# 2. Package Manager (pnpm / Node / Yarn)
+# ==========================================
+node_modules/
+jspm_packages/
+web_modules/
+
+# pnpm
+.pnpm-store/
+.pnpm-debug.log*
+
+# Logs & Debug
+logs/
+*.log
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+lerna-debug.log*
+
+# ==========================================
+# 3. Expo & React Native & Metro
+# ==========================================
+.expo/
+dist/
+web-build/
+*.metro-cache
+.metro-health-check*
+
+# Expo Prebuild native directories (Managed Workflow 기준)
+# Native 코드를 직접 수정하는 Bare Workflow 전환 시 아래 두 줄을 주석 처리하세요.
+/android
+/ios
+
+# Native build outputs & Keystores
+.kotlin/
+*.apk
+*.aab
+*.ipa
+*.jks
+*.keystore
+*.orig.*
+google-services.json
+GoogleService-Info.plist
+
+# ==========================================
+# 4. TypeScript & Backend Build (Express / Mongoose)
+# ==========================================
+/dist
+/build
+*.tsbuildinfo
+
+# Coverage / Testing
+coverage/
+.nyc_output/
+
+# ==========================================
+# 5. IDE & OS Junk
+# ==========================================
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+.history/
+
+# macOS / Windows
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
